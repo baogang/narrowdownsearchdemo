@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2018 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<config xmlns="http://www.hybris.com/cockpit/config"
+        xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+	<context merge-by="type" parent="Principal" type="User" component="cs-editor-area" module="customersupportbackoffice">
+		<editorArea:editorArea name="">
+			<editorArea:tab name="customersupport_backoffice_customer_tab_profile" position="1" tooltipText="customersupport_backoffice_customer_tab_profile_desc"
+                merge-mode="replace">
+				<editorArea:section name="hmc.properties">
+					<editorArea:attribute qualifier="sessionLanguage" position="1"/>
+					<editorArea:attribute qualifier="sessionCurrency" position="2"/>
+					<editorArea:attribute qualifier="groups" position="3">
+                        <editorArea:editor-parameter>
+                            <editorArea:name>restrictToType</editorArea:name>
+                            <editorArea:value>CustomerList</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>availableValuesProvider</editorArea:name>
+                            <editorArea:value>demoReferenceSearchFacade</editorArea:value>
+                        </editorArea:editor-parameter>
+					</editorArea:attribute>
+					<editorArea:attribute qualifier="description" position="4"/>
+				</editorArea:section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+</config>
